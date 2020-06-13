@@ -1,16 +1,18 @@
-<a><%= link_to 'Chatroom', root_path, class: "item" %></a>
+<% if logged_in? %>
+<a><%= link_to 'Chatroom', chatroom_path, class: "item" %></a>
 <a class="item">Messages</a>
+<% end %>
 
 <div class="right menu">
-<div class="ui dropdown item">
-    Account <i class="dropdown icon"></i>
-    <div class="menu">
-    <a><%= link_to 'Login', login_path, class: "item" %></a>
-    <a class="item">Logout</a>
-    <a class="item">Signup</a>
+    <% if logged_in? %>
+        <div class="ui dropdown item">
+            Account <i class="dropdown icon"></i>
+            <div class="menu">
+            <a><%= link_to 'Logout', logout_path, class: "item" %></a>
+            </div>
+        </div>
+    <% end %>
+    <div class="item">
+        <div class="ui brown button">Sign Up</div>
     </div>
-</div>
-<div class="item">
-    <div class="ui brown button">Sign Up</div>
-</div>
 </div>
