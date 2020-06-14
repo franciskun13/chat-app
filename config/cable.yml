@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDISTOGO_URL") { "redis://redistogo:8d00a2da162da7fb8a481f92eac45967@pike.redistogo.com:11086" } %>
+  url: <%= ENV.fetch("REDIS_URL") { "redis://h:pf836c0a2afb8565032317955ee6db287ac8d77984003bb944d2736bacad56c02@ec2-54-208-85-178.compute-1.amazonaws.com:19549" } %>
   channel_prefix: chat_app_production
