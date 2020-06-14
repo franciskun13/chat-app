@@ -6,11 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:8d00a2da162da7fb8a481f92eac45967@pike.redistogo.com:11086" } %>
-  host: pike.redistogo.com
-  port: 11086
-  password: 8d00a2da162da7fb8a481f92eac45967
-  inline: true
-  timeout: 1
-
+  url: <%= ENV.fetch("REDISTOGO_URL") { "redis://redistogo:8d00a2da162da7fb8a481f92eac45967@pike.redistogo.com:11086" } %>
   channel_prefix: chat_app_production
