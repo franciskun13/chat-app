@@ -91,6 +91,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_cable.disable_request_forgery_protection = true
+  
+  config.action_cable.url = "wss://chat-app-122415.herokuapp.com/cable"
+
   
 end
