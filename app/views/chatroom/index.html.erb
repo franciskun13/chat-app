@@ -7,21 +7,20 @@
 
     <div class="twelve wide column">
         <div class="ui fluid raised card chatbox">
-            <div class="content">
-               <div class="ui large feed">
+            <div class="content" id="messages">
+               <div class="ui large feed" id="message-container">
                     <%= render @messages  %>
-                    
                 </div>
             </div>
-
             <div class="extra content">
-                <form class="ui reply form">
+                <%= form_for(@message, html: {class: "ui reply form", role: "form" }, url: message_path, remote: true) do |f| %>
                     <div class="field">
                         <div class="ui fluid icon input">
-                        <input type="text" placeholder="Enter a message">&nbsp;<i class="inverted circular brown pencil alternate icon"></i>                    
+                        <%= f.text_field :body, placeholder: "Enter a message" %>
+                        <%= f.button '<i class="bordered inverted circular brown paper plane icon"></i>'.html_safe %>
                         </div>
                     </div>
-                </form>
+                <% end %>
                 
             </div>
 
@@ -32,15 +31,7 @@
             <div class="ui fluid raised card chatbox">
                 <div class="content">
                     <div class="ui inverted vertical menu">
-                    <a class="active item">
-                        Home
-                    </a>
-                    <a class="item">
-                        Messages
-                    </a>
-                    <a class="item">
-                        Friends
-                    </a>
+                    <a><%= link_to 'Chatroom', chatroom_path, class: "item" %></a>
                     </div>
                 </div>
             </div>

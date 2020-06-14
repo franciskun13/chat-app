@@ -1,7 +1,13 @@
 <div class="event">
     <div class="content">
     <div class="summary">
-        <em style ="color: brown"><%= message.user.username  %>: </em><%= message.body  %>
+        <em style ="color: brown">
+        <% if message.user.username == session[:username] %>
+            <%= "Me:"  %>
+        <% else  %>
+            <%= message.user.username + ":" %>
+        <% end  %> 
+        </em><%= message.body  %>
     </div>
     </div>
 </div>
