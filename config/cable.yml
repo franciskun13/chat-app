@@ -6,10 +6,10 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://h:pdb09a40e55ed94d2be0830d8d8fcbd2fdf7267641ef721171931af253774333b@ec2-3-93-120-184.compute-1.amazonaws.com:28889" } %>
-  host: ec2-3-93-120-184.compute-1.amazonaws.com
-  port: 28889
-  password: pdb09a40e55ed94d2be0830d8d8fcbd2fdf7267641ef721171931af253774333b
+  url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:8d00a2da162da7fb8a481f92eac45967@pike.redistogo.com:11086" } %>
+  host: pike.redistogo.com
+  port: 11086
+  password: 8d00a2da162da7fb8a481f92eac45967
   inline: true
   timeout: 1
 

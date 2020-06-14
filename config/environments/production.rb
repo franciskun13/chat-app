@@ -92,7 +92,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  config.action_cable.url = "wss://chat-app-122415.herokuapp.com/cable"
+  config.middleware.use ChatActionCable  
+  config.web_socket_server_url = "wss://chat-app-122415.herokuapp.com/"
 
   
 end
