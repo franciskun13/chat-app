@@ -2,13 +2,26 @@
 <html>
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
-  <link rel="shortcut icon" type="image/x-icon" href="/app/assets/images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
   <style>
   body{
-    background-color: beige;  
+    background-color: beige;
+    font-family: 'Roboto Condensed', sans-serif;  
   }
+  .dialog {
+    margin: 100px;
+    text-align:center;
+  }
+
+  .error {
+    color: #975B33;
+    font-size: 70px;
+  }
+
   </style>
 </head>
 
@@ -16,6 +29,7 @@
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
+      <p class="error">404</p>
       <h1>The page you were looking for doesn't exist.</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
     </div>
